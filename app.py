@@ -20,5 +20,8 @@ def detect_edge():
     response.headers['Content-Type'] = 'image/png'
     return response
 
+@app.route("/",methods=["GET"])
+def welcome():
+    return "Edge Dectection API Online"
 if __name__=="__main__":
     app.run("0.0.0.0",8080)
